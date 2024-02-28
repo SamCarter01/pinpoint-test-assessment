@@ -16,7 +16,7 @@ include WebhookHelpers
 include PinPointHelpers
 include HiBobHelpers
 
-def webhook_handler(event:, context:)
+def lambda_handler(event:, context:)
   pinpoint_event = event
 
   return not_hire_event_response unless pinpoint_event['event'] == APPLICATION_HIRED
